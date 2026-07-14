@@ -1,0 +1,11 @@
+[
+  {
+    "id": 900001,
+    "priority": 1,
+    "action": { "type": "allow" },
+    "condition": {
+      "regexFilter": "^https://shieldai-placeholder\\.invalid/.*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

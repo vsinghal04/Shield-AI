@@ -1,0 +1,1 @@
+Fixture note: add a PNG at ocr-phishing.png with embedded text "Click here to verify your account" for visual tests.

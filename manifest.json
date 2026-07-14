@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "ShieldAI — Social Attack Defence",
+  "version": "1.0.0",
+  "description": "AI-powered real-time phishing, social engineering, and scam detection",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "scripting",
+    "history",
+    "identity",
+    "clipboardRead",
+    "declarativeNetRequest",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": ["https://*/*", "http://*/*"],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content-script.ts"],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "shieldai_blocklist",
+        "enabled": true,
+        "path": "rules/blocklist.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["models/*", "datasets/*", "warning.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

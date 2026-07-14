@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShieldAI — Navigation warning</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0f172a;
+        color: #f1f5f9;
+        padding: 2rem;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #ef4444;
+      }
+      .url {
+        word-break: break-all;
+        color: #94a3b8;
+        font-size: 13px;
+      }
+      button {
+        margin-top: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .back {
+        background: #6366f1;
+        color: #fff;
+      }
+      .ignore {
+        background: #334155;
+        color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⚠️ ShieldAI blocked this page</h1>
+    <p>This URL matched a high threat score in ShieldAI’s cache.</p>
+    <p class="url" id="target"></p>
+    <p>Score: <strong id="score"></strong> / 100</p>
+    <button class="back" type="button" id="back">Go back</button>
+    <button class="ignore" type="button" id="proceed">I understand the risk</button>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const rawUrl = params.get('url') || '';
+      const score = params.get('score') || '?';
+      document.getElementById('target').textContent = rawUrl;
+      document.getElementById('score').textContent = score;
+      document.getElementById('back').addEventListener('click', () => window.history.back());
+      document.getElementById('proceed').addEventListener('click', () => {
+        if (rawUrl) window.location.href = rawUrl;
+      });
+    </script>
+  </body>
+</html>
