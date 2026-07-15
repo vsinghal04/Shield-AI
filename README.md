@@ -20,10 +20,22 @@
 
 ### AI-Powered Social Engineering Defense System
 
-ShieldAI is a browser extension that helps users detect phishing and AI-generated social engineering attacks in real time.
+## 📖 Overview
 
-The extension analyzes suspicious text, URLs, emails, and image-based content using Artificial Intelligence, Machine Learning, OCR, and cybersecurity rules to warn users before they interact with potentially malicious content.
+Modern phishing attacks are no longer limited to suspicious links or poorly written emails. Attackers now use Generative AI to create highly convincing messages, fake login pages, and image-based scams that closely resemble legitimate communication.
 
+**ShieldAI** is an AI-powered browser extension designed to defend users against these evolving threats. It combines machine learning, OCR, URL intelligence, and rule-based threat detection to analyze suspicious content in real time and provide an immediate risk assessment before users interact with potentially malicious websites, emails, or messages.
+
+Unlike traditional phishing detection tools that rely mainly on blacklists or keyword matching, ShieldAI performs multi-layer analysis by combining:
+
+- 🧠 AI-based text classification
+- 🌐 URL reputation and pattern analysis
+- 🖼️ OCR for image-based scam detection
+- 📧 Gmail email scanning
+- ⚠️ Risk score generation
+- 🛡️ Rule-based cybersecurity checks
+
+This hybrid approach enables the extension to detect modern social engineering attacks more accurately while remaining lightweight, privacy-conscious, and compatible with Chromium-based browsers.
 ---
 
 ## Key Features
