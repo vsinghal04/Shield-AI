@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/banner.png" alt="ShieldAI Banner" width="100%">
+</p>
+
 # 🛡️ ShieldAI
 
 ### AI-Powered Social Engineering Defense System
