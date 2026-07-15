@@ -8,7 +8,7 @@ The extension analyzes suspicious text, URLs, emails, and image-based content us
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - AI-powered scam message detection
 - Suspicious URL analysis
@@ -21,7 +21,7 @@ The extension analyzes suspicious text, URLs, emails, and image-based content us
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - JavaScript
 - HTML & CSS
@@ -34,7 +34,7 @@ The extension analyzes suspicious text, URLs, emails, and image-based content us
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 src/
@@ -58,6 +58,6 @@ public/
 
 ---
 
-## 📄 License
+## License
 
 MIT License
