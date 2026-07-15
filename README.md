@@ -101,6 +101,64 @@ K -->|No| M[✅ Safe Content]
 ```
 ---
 
+### Detection Flow
+
+The detection pipeline follows a multi-layer analysis approach to improve the accuracy of identifying phishing and social engineering attacks.
+
+1. The browser extension continuously monitors webpages, emails, URLs, and image-based content.
+
+2. All collected inputs are passed to the Multi-Layer Detection Engine.
+
+3. The engine performs parallel analysis using:
+   - AI-based text classification
+   - URL reputation analysis
+   - OCR-based image processing
+   - Rule-based threat detection
+
+4. The outputs from all detection modules are combined to generate a final risk score.
+
+5. Based on the calculated score, ShieldAI either displays a security warning or marks the content as safe.
+
+## System Architecture
+
+```mermaid
+flowchart TB
+
+U[👤 User]
+
+U --> E[🧩 Browser Extension]
+
+E --> C[📄 Content Script]
+E --> G[📧 Gmail Analyzer]
+E --> P[🖼️ Popup Interface]
+
+C --> D
+G --> D
+
+D[🧠 Multi-Layer Detection Engine]
+
+D --> T[💬 AI Text Analysis]
+D --> U1[🌐 URL Analysis]
+D --> O[🖼️ OCR Processing]
+D --> R[🛡️ Rule Engine]
+
+T --> S
+U1 --> S
+O --> S
+R --> S
+
+S[⚠️ Risk Score Generator]
+
+S --> W[🚨 Warning Interface]
+
+W --> U
+```
+### Architecture Overview
+
+ShieldAI follows a modular architecture in which the browser extension acts as the primary interface between the user and the detection engine.
+
+The extension continuously captures webpages, emails, URLs, and image content for analysis. These inputs are processed through independent AI and cybersecurity modules including text classification, OCR, URL reputation analysis, and rule-based detection. The outputs from each module are aggregated by the Risk Score Generator to determine the likelihood of a social engineering attack. Finally, the user is presented with an immediate warning or safe status directly within the browser.
+
 ## Project Structure
 
 ```text
