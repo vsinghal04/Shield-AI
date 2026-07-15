@@ -64,6 +64,43 @@ This hybrid approach enables the extension to detect modern social engineering a
 
 ---
 
+## Workflow- Detection Pipeline
+
+```mermaid
+flowchart LR
+
+A[🌍 Browser Content]
+B[📧 Gmail Email]
+C[🔗 URL]
+D[🖼️ Image OCR]
+
+A --> E
+B --> E
+C --> E
+D --> E
+
+E[🔍 ShieldAI Analysis Engine]
+
+E --> F[🧠 AI Text Analysis]
+E --> G[🌐 URL Analysis]
+E --> H[🛡️ Rule Engine]
+E --> I[📖 OCR Processing]
+
+F --> J
+G --> J
+H --> J
+I --> J
+
+J[⚠️ Risk Score Engine]
+
+J --> K{Threat Detected?}
+
+K -->|Yes| L[🚨 Warning Popup]
+
+K -->|No| M[✅ Safe Content]
+```
+---
+
 ## Project Structure
 
 ```text
