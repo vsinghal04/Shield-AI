@@ -159,28 +159,29 @@ ShieldAI follows a modular architecture in which the browser extension acts as t
 
 The extension continuously captures webpages, emails, URLs, and image content for analysis. These inputs are processed through independent AI and cybersecurity modules including text classification, OCR, URL reputation analysis, and rule-based detection. The outputs from each module are aggregated by the Risk Score Generator to determine the likelihood of a social engineering attack. Finally, the user is presented with an immediate warning or safe status directly within the browser.
 
-## Project Structure
+## ⚙ Installation
 
-```text
-src/
-│
-├── analyzers/
-├── background/
-├── content/
-├── gmail-addon/
-├── ml/
-├── popup/
-├── options/
-└── shared/
-
-public/
-│
-├── datasets/
-├── models/
-├── rules/
-└── icons/
+```bash
+git clone https://github.com/vsinghal04/Shield-AI.git
 ```
 
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
+
+Open
+
+```
+chrome://extensions
+```
+
+Enable **Developer Mode** and click **Load unpacked**.
+
+Select the generated **dist** folder to install the extension.
 ---
 
 ## License
